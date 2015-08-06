@@ -7,7 +7,6 @@ span {
 }
 
 /* Only change border properties on the following */
-
 .a {
  border-width: 10px;
  border-color: orange;
@@ -17,7 +16,9 @@ span {
 	border-style: dashed;
 	border-color: red;
 }
-
+/*Nothing really special with this one. Only thing might be the fact you can
+specify which side gets the border, padding or margin style applied using top,
+right, bottom, left*/
 .c {
 	border-top: thick solid #cccccc;
 	border-left: thick solid #cccccc;
