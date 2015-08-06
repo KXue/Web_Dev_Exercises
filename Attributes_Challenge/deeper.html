@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Diving Deeper
+    </title>
+  </head>
+  <body>
+    <p>
+      Draw some coloured lines. Try using different tags for each line.
+    </p>
+    <!--If a rectangle has no height, it's basically a line. Divs and p without
+    content have no height but 100% width. These elements are called block
+    elements-->
+    <div style = "border-style:solid; border-color:blue; border-width:1px;"></div>
+    <hr style = "margin-top:15px; border: 1px solid red;">
+    <p style = "border: 1px solid green;"></p>
+    <p>
+      This is two DIVs overlapping. Notice the borders.
+    </p>
+    <!--Sometimes, it's easier to put divs inside more divs. This helps redefine
+    the absolute position since absolute position is relative to the position of
+    the parent element. Bodies by default have an 8px margin hence right:8px.
+    The a in rgba stands for alpha which is basically opacity. This way, your
+    text opacity isn't affected, but the background colours can mix. If you use
+    the opacity property, your text will get fainter too. z-index determines
+    what goes in front of what. A larger z-index goes in front of a smaller one-->
+    <div style = "height:100px;">
+      <div style = "position:absolute; width:60%; height:100px; right:8px; background:rgba(0, 0, 255, 0.5); z-index:3; border-style:dashed; border-color:red">DIV 1</div>
+      <div style = "position:absolute; width:60%; height:100px; background:rgba(255, 0, 0, 0.5); z-index:2; border-style:solid;">DIV 2</div>
+    </div>
+    <p>
+      This table should be built with 3 columns. HINT: You don't need the style tag!
+    </p>
+    <!--If you've finished the deeper challenge for markup, you should know how
+    to make tables. This one just takes a bit more time to figure out but is
+    otherwise not any harder than the markup challenge table.-->
+    <table border = "1" style = "width:100%">
+      <tr>  <th colspan = "2">2 columns</th>  <th rowspan = "2">2 rows</th>  </tr>
+      <tr>  <th>1112</th>  <th>2222</th>  </tr>
+      <tr>  <td rowspan = "2">2 rows</td>  <td>AAAA</td>  <td>BBBB</td>  </tr>
+      <tr>  <td>CCCC</td>  <td>DDDD</td>  </tr>
+      <tr>  <td>EEEE</td>  <td rowspan = "2" colspan = "2">2 columns and 2 rows</td>  </tr>
+      <tr>  <td>FFFF</td>  </tr>
+      <tr>  <td>GGGG</td>  <td>HHHH</td>  <td>IIII</td>  </tr>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,112 @@
+/*This is how you commen css code.*/
+/*Selecting certain types of elements*/
+h1{
+  color:blue;
+}
+p{
+  font-family:  "comic sans MS", arial, helvetica,;
+}
+ol{
+  list-style-type:upper-roman;
+}
+ul{
+  list-style-type:square;
+}
+div{
+  border-radius: 7px;
+}
+
+
+/*selecting an element with an ID*/
+#red-box{
+  background-color:red;
+  width:100px;
+  height:100px;
+  position:relative;
+  -webkit-animation: flipout 2s ease infinite alternate;
+  -moz-animation: flipout 2s ease infinite alternate;
+  animation: flipout 2s ease infinite alternate;
+}
+
+@-webkit-keyframes flipout {
+    0%  {
+      left:0%;
+      -webkit-transform: rotate(0deg)
+    }
+    100%{
+      left:50%;
+      -webkit-transform: rotate(720deg)
+    }
+}
+
+@-moz-keyframes flipout {
+    0%  {
+      left:0%;
+      -webkit-transform: rotate(0deg)
+    }
+    100%{
+      left:50%;
+      -webkit-transform: rotate(720deg)
+    }
+}
+
+@keyframes flipout {
+    0%  {
+      left:0%;
+      -webkit-transform: rotate(0deg)
+    }
+    100%{
+      left:50%;
+      -webkit-transform: rotate(720deg)
+    }
+}
+
+/*Selecting a class*/
+.yellow-box{
+  background-color:yellow;
+  width:200px;
+  height:100px;
+  border-style:solid;
+  border-width:5px;
+  border-color:green
+}
+
+.yellow-box:hover{
+  border-color:red;
+}
+
+/*Selecting elements of a certain class*/
+div.nesting-div{
+  font-weight:900;
+  color:blue;
+  border-style:solid;
+  border-width:5px;
+  border-color:#452F74;
+  width:400px;
+  height:200px;
+}
+
+/*This is where it gets a bit interesting*/
+/*Selects only the children of nesting-div class divs*/
+div.nesting-div div{
+  font-weight:normal;
+  color:red;
+  border-style:solid;
+  border-width:2px;
+  border-color:#8F305B;
+  width:400px;
+  height:100px;
+}
+
+/*Selects the next sibling of the children of nesting-div class divs*/
+/*Since this is more specific that the children of nesting div, it's style
+overrides the style of div.nesting-div div*/
+div.nesting-div div + div{
+  font-weight:bold;
+  color:blue;
+  border-style:none;
+  width:auto;
+  height:auto;
+  border-width:medium;
+  border-color:black;
+}
