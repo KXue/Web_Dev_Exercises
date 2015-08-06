@@ -1,0 +1,51 @@
+#line-div{
+  border-style:solid;
+  border-color:blue;
+  border-width:1px;
+}
+
+p.line-p{
+  border: 1px solid green;
+}
+
+/*You can't affect rowspan or colspan because that has to do with the layout of
+the table itself rather than the styling of it. You can however affect the table
+border collapse, width, height, text alignment and padding.*/
+table{
+  width:100%;
+  /*collapsing the border just means changing the border from a two line border
+  to a one line border. the two lines collapse into one*/
+  border-collapse:collapse;
+}
+
+hr{
+  margin-top:15px;
+  border: 1px solid red;
+}
+
+div.parent-div{
+  height:100px;
+}
+
+/*Even crazier selector shenannigans. This should be pretty self explanatory. You
+can be very very specific with divs.*/
+div.parent-div > div:first-child{
+  position:absolute;
+  width:60%;
+  height:100px;
+  right:8px;
+  background:rgba(0, 0, 255, 0.5);
+  z-index:3;
+  border-style:dashed;
+  border-color:red;
+}
+
+/*you can also get the same effect with div.parent-div > div:last-child*/
+div.parent-div > div:first-child + div{
+  position:absolute;
+  width:60%;
+  height:100px;
+  background:rgba(255, 0, 0, 0.5);
+  z-index:2;
+  border-style:solid;
+}
