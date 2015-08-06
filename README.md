@@ -1,1 +1,2 @@
-# Web_Dev_Exercises
+# Web Dev Exercises
+Solutions with commentary for the web dev program.
