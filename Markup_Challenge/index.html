@@ -7,6 +7,13 @@
   <head>
     <!--The stuff in <title> tags end up in the tab.-->
     <title>Toronto Sports</title>
+    <!--Metadata contains data about the page. Metada isn't displayed, but is
+    is still useful. Charset defines the encoding of the page.-->
+    <meta charset="utf-8">
+    <!--Description talks about what the page contains-->
+    <meta name="description" content="A brief page on Toronto's sports teams.">
+    <!--WHODUNIT!? This is pretty self explanatory.-->
+    <meta name="author" content="Kevin Xue, Briar Smith">
   </head>
   <body>
     <!--The <hr> tag is the line at the top. it is used to separate content in an HTML page-->
@@ -57,10 +64,12 @@
     the text that explains the contents of the image, width and height. Width
     and height are optional. Images don't need a closing tag because you can't
     put anything else in images.-->
-    <img src = "img/toronto.jpg" alt = "Toronto">
+    <!--Images load faster if you define their width and height
+    - Briar Smith-->
+    <img src = "img/toronto.jpg" alt = "Toronto" width = "240" height = "160"/>
     <!--Here's a broken image. The alt text is displayed instead. You can fix it
     by adding an image called "nope.jpg" into the img folder or changing the src-->
-    <img src = "img/nope.jpg" alt = "This image won't work, lazy slob">
+    <img src = "img/nope.jpg" alt = "This image won't work, lazy slob"/>
     <h2>
       Toronto Maple Leafs
     </h2>
