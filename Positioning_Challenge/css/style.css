@@ -1,0 +1,39 @@
+html{
+  height: 100%;
+}
+body {
+  height: 100%;
+}
+div{
+  width: 33%;
+  height: 33%;
+}
+div.display_div{
+  display: inline-block;
+  background-color: #0169CE;
+}
+div.float_div{
+  float: left;
+  background-color: #1E90FF;
+}
+div.float_centre{
+  margin: 0px 4px;
+}
+div.position_div{
+  position:relative;
+  background-color: #75BAFD;
+}
+div.position_left{
+  left: 0;
+  top: 33%;
+  margin-top: 4px;
+}
+div.position_centre{
+  left: 33%;
+  margin-left: 4px;
+}
+div.position_right{
+  left: 66%;
+  top:-33%;
+  margin-left: 8px;
+}
