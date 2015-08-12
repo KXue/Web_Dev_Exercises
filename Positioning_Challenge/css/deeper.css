@@ -1,0 +1,45 @@
+html{
+  height: 100%;
+}
+body {
+  height: 100%;
+}
+div.outer_div{
+  height: 33%;
+  border-style: solid;
+  border-color: blue;
+  margin:5px;
+}
+div.smaller_div{
+  width: 100px;
+  height: 100px;
+}
+div.leftest{
+  display: inline-block;
+}
+div.top_left{
+  float: left;
+}
+div.top_right{
+  float: right;
+}
+div.letter_number{
+  background-color: #FFC90C;
+  border-style: solid;
+  border-width: 1px;
+}
+div.absolute_div{
+  position: relative;
+}
+#b3{
+  left: 25%;
+  top: -150px;
+}
+#c3{
+  left: 50%;
+  top: -150%
+}
+#d3{
+  left: 95%;
+  top: -100%;
+}
