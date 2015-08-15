@@ -93,22 +93,22 @@ body{
   border-radius:25px;
 }
 .options-container h1{
-  font-family: "arial regular", "arial";
+  font-family: "arial bold", "arial";
   font-weight:bold;
   font-size: 42px;
 }
 .options-container h2{
-  font-family: "arial regular", "arial";
+  font-family: "arial bold", "arial";
   font-weight:bold;
   font-size: 24px;
 }
 .options-container p{
-  font-family: "arial";
+  font-family: "arial regular", "arial";
   font-size: 18px;
   margin: 40px 0px;
 }
 .options-container a{
-  font-family: "arial";
+  font-family: "arial regular", "arial";
   font-size: 18px;
   padding: 5px 35px;
   border-style: solid;
@@ -144,13 +144,13 @@ body{
   margin-top: -160px;
 }
 .feature-container h2{
-  font-family: "arial";
+  font-family: "arial bold", "arial";
   font-weight: bold;
   font-size: 30px;
   margin: 10px 0px 20px 0px;
 }
 .feature-container p{
-  font-family: "arial";
+  font-family: "arial regular", "arial";
   font-size: 18px;
   line-height: 30px;
 }
