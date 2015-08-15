@@ -1,72 +1,129 @@
+/*
+FOREWORD:
+  OK, so is css file is a bit crazy. I removed ALL the classes because you get
+  points for removing classes AND for using crazy selectors. Aside from that,
+  the key here is finding what elements have the same properties and applying
+  those properties to the same elements.
+BTW:
+  This is DEFINITELY NOT how you should make your css files. it's REALLY hard to
+  read or figure out what's going on. The original classes implementation is
+  muchmore readable.
+Also:
+  This sounds cliche but there's no right answer. Your answer's right as long as
+  you get points. I just took one idea to the extreme, but you might save more
+  lines of code using more classes. Anyways, There is probably a way to get more
+  points than I got.
+Finally:
+  It's kinda cheap to put your curly brackets on the same line as properties so
+  I didn't do that. You can to save even more lines but I don't know if you get
+  points for it.
+*/
+/*
+ALL text is white (except for the word "color") so we'll put color:white in
+body so all the text will be white. This saves several lines.
+*/
 body {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
+  color:white;
 }
-.container {
+/*
+Anchor tags are blue by default even when you set body color. This is a good
+chance to use the inherit value so anchor color inherits white from body color.
+*/
+a{
+  color:inherit;
+}
+/*
+The original css file had special selectors that selected all ul that are
+children of certain classes. But ALL ul have the same line height property so I
+just the line-height property for all ul. this saves a line or two. You can use
+a crazy and unnecessary selector for bonus points.
+*/
+ul{
+  line-height: 30px;
+}
+/*
+There's only one image so there's no reason to use classes. You get 1 point
+here. You can use a crazy selector to get 1 extra point.
+*/
+img {
+  width: 100%;
+}
+/*
+There's only one span so there's no reason to use classes. You get 1 point
+here. You can use a crazy selector to get 1 extra point.
+*/
+span{
+  color:#9b59b6;
+}
+/*
+This replaces container. You get 1 point for removing a class and 1 point for
+using a special selector.
+*/
+body > div{
   margin:0 auto;
   max-width:960px;
   padding-bottom:250px;
 }
-.jumbotron {
-  width: 100%;
+/*
+Not sure if we taught you first-child but here is is. The selector is self
+explanatory. This replaces jumbotron. You can also remove width because divs are
+display: block; by default. This means they fill the width automatically.
+*/
+body > div > div:first-child {
   background-color:#3498db;
 }
-.jumbotron h1 {
+/*
+This replaces jumbotron h1. The font-weight is defined in the next block of css.
+*/
+body > div > div:first-child h1 {
   font-size:80px;
+}
+/*
+Both h1 ahd h2 in jumbotron has font-weight 100 so you save 1 line by combining
+selectors. This replaces jumbotron h2 and a bit of jumbotron h1
+*/
+body > div > div:first-child h1, body > div > div:first-child h2{
   font-weight: 100;
 }
-.jumbotron h2 {
-  font-weight: 100;
-}
-.content {
+/*
+This replaces content. Notice that color is missing. It's defined in body
+*/
+body > div > div:first-child > div {
   text-align: center;
-  color:white;
   padding: 50px;
 }
-.content-image {
-  width: 100%;
-}
-.features {
+/*
+This replaces parts of features and resources. Both share many similar
+properties.
+*/
+body > div > div + div{
   float:left;
   width:50%;
+}
+/*
+Background-color needs to be more specific so I used more specific selectors.
+nth-child and last child are also really self-explanatory. This replaces parts
+of features and resources.
+*/
+body > div > div:nth-child(2){
   background-color: #9b59b6;
 }
-.features-content {
-  padding: 20px;
-}
-.features-content ul {
-  color:white;
-  line-height: 30px;
-}
-.features-heading {
-  text-decoration: underline;
-  color:white;
-}
-.resources {
-  float:left;
-  width: 50%;
+body > div > div:last-child{
   background-color: #2ecc71;
 }
-.resources-content {
+/*
+Replaces features-content and resources-content. This is overwritten in the
+div in the jumbotron because "body > div > div:first-child > div" is more
+specific because of the "first-child"
+*/
+body > div > div > div {
   padding: 20px;
 }
-.resources-heading {
+/*
+This replaces resources-heading and features-heading.
+*/
+body > div > div + div > div > h2 {
   text-decoration: underline;
-  color:white;
-}
-.resources-content ul {
-  color:white;
-  line-height: 30px;
-}
-.resources-content ul a {
-  color:white;
-}
-.quotes {
-  width: 100%;
-}
-.quotes-heading {
-  color:white;
-}
-.color {
-  color:#9b59b6;
 }
