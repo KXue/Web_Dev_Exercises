@@ -15,8 +15,18 @@ ul{
 div{
   border-radius: 7px;
 }
+#hover-div {
+  background-color:blue;
+  position:relative;
+  background-color:blue;
+  width:50px;
+  height:50px;
+}
 
-
+#hover-div:hover{
+  width:55px;
+  height:55px;
+}
 /*selecting an element with an ID*/
 #red-box{
   background-color:red;
@@ -30,35 +40,29 @@ div{
 
 @-webkit-keyframes flipout {
     0%  {
-      left:0%;
-      -webkit-transform: rotate(0deg)
+      background-color:red;
     }
     100%{
-      left:50%;
-      -webkit-transform: rotate(720deg)
+      background-color:green;
     }
 }
 
 @-moz-keyframes flipout {
-    0%  {
-      left:0%;
-      -webkit-transform: rotate(0deg)
-    }
-    100%{
-      left:50%;
-      -webkit-transform: rotate(720deg)
-    }
+  0%  {
+    background-color:red;
+  }
+  100%{
+    background-color:green;
+  }
 }
 
 @keyframes flipout {
-    0%  {
-      left:0%;
-      -webkit-transform: rotate(0deg)
-    }
-    100%{
-      left:50%;
-      -webkit-transform: rotate(720deg)
-    }
+  0%  {
+    background-color:red;
+  }
+  100%{
+    background-color:green;
+  }
 }
 
 /*Selecting a class*/
