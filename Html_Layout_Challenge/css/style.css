@@ -1,23 +1,37 @@
+/*OK, so HTML wasn't so bad, we just kept putting things into divs until they
+were easy to code. The css isn't too hard either. I usually text-align:center
+inline-block div elements to center things. This way, your website will still
+look pretty nice when you make the screen all narrow.*/
 body{
+  /*The spec said 1366 px but I'm not sure if they meant that or full screen.
+  It's easier to work with 1366px though, so I cheated a bit here.*/
   max-width:1366px;
+  /*If you give the body a width, you generally want it centered so it looks
+  nice*/
   margin: 0px auto;
 }
 /*had a weird problem with mystery margins. This solves it.*/
 *{
   margin: 0px;
 }
-.navbar{
+/*Coded to the spec*/
+nav{
   padding: 0px 70px 0px 70px;
   height: 80px;
 }
-.navbar img{
+nav img{
   margin-top: 29px;
   float:left;
 }
-.navbar a{
+nav a{
   margin-top: 18px;
   padding: 5px 35px;
+  /*In order to make those nice semicircles at the ends, just get a big enough
+  border radius until the quarter circles join to make semicircles. play around
+  with border-radius until you're satisfied.*/
   border-radius: 20px;
+  /*My browser doesn't support arial black regular, so I added arial black as
+  well*/
   font-family: "arial black regular", "arial black";
   font-size: 18px;
   text-decoration: none;
@@ -25,6 +39,8 @@ body{
   border-style: solid;
   border-width: 2px;
 }
+/*Specs didn't give me a colour, so I just used paint's eyedropper. That was a
+pain*/
 .login-button{
   color: #df1763;
 }
@@ -36,6 +52,9 @@ body{
 }
 .jumbotron{
   background: url(../img/hero-photo.png);
+  /*The advantage of having a known and fixed width is you can set the
+  background size! This way, the image won't get all fat or skinny when you
+  change the size of the window.*/
   background-size: 1366px 720px;
   background-repeat: no-repeat;
   height: 720px;
@@ -43,6 +62,8 @@ body{
 }
 .jumbotron-content{
   position: relative;
+  /*the next 2 lines centre the div vertically. What they do is pretty self
+  explanatory.*/
   top: 50%;
   transform: translateY(-50%);
   color:white;
@@ -53,21 +74,26 @@ body{
   max-width:500px;
 }
 .jumbotron-content h2{
+  /*I'm too poor for regular arial...*/
   font-family: "arial regular", "arial";
   font-size: 22px;
   margin-bottom: 40px;
 }
 .jumbotron a.subscribe-button{
   padding: 15px 55px;
+  /*Same as the anchor in the nav, just a bigger button*/
   border-radius: 40px;
   font-family: "arial black regular", "arial black";
   font-size: 25px;
   text-decoration: none;
 }
+/*centres inline stuff*/
 .description-container{
   text-align: center;
   margin: 70px 0px;
 }
+/*saving myself a few lines since the properties of the blue titles and their
+grey subtitles are the same*/
 .description-container h1, .artist-container h1{
   font-size: 36px;
   color: #2B95FD;
@@ -88,11 +114,15 @@ body{
 .options-container div{
   display: inline-block;
   text-align: center;
+  /*Calculated the width of each div given the total width and the width of all
+  the margins. Kinda cheap, but it works well enough.*/
   width: 280px;
   padding: 55px 0px;
   border-radius:25px;
 }
 .options-container h1{
+  /*I don't have arial bold either, so I made do with regular arial, just bolded
+  */
   font-family: "arial bold", "arial";
   font-weight:bold;
   font-size: 42px;
@@ -116,6 +146,8 @@ body{
   text-decoration: none;
   color: inherit;
 }
+/*MORE EYEDROPPER ACTION! Why won't they just give us the hex codes for their
+colours?*/
 .basic-container{
   background-color: #2b95fd;
 }
@@ -126,6 +158,7 @@ body{
 .premium-container{
   background-color: #7a30d3;
 }
+/*Purple lady works the same as blue lady.*/
 .features-container{
   background: url(../img/about-photo.png);
   background-size: 1366px 720px;
@@ -161,9 +194,19 @@ body{
   margin-top: 70px;
   text-align: center;
 }
+/*originally, the margin of images-container was 70px top and bottom and the
+container had a width of 948px. But then the images in the container would be
+too close together (margin:4px). I don't know if you can set the default margin
+between inline elements, so I just gave each img a margin of 25 on all sides.
+Problem was the images are now too wide to fit and extend the top and bottom
+margins, so I increased the width by 50 and subtracted 25 from the top and
+bottom margins. This way, the images look nice in 2x3 as well as 3x2.*/
 .images-container{
-  margin: 70px auto;
-  max-width: 948px;
+  margin: 45px auto 45px auto;
+  max-width: 998px;
+}
+.images-container img{
+  margin:25px;
 }
 footer{
   padding: 0px 70px 0px 70px;
