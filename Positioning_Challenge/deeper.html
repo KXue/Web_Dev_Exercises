@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>More Positioning</title>
+    <link rel = "stylesheet" type = "text/css" href = "css/deeper.css"/>
+  </head>
+  <body>
+    <!--The borders makes it pretty obvious how any divs we need. The letters
+    and numbers makes it easy to figure out which divs go ininside of which.-->
+    <!--outer_divs have a blue border and take up 1/3 of the body-->
+    <div class="outer_div">
+      <!--top_left means floats to the left, top_right means floats to the right-->
+      <!--smaller_divs are 100px * 100px.-->
+      <!--letter_number applies the black border and yellow background.-->
+      <div class = "top_left smaller_div letter_number">d1</div>
+      <div class = "top_left smaller_div letter_number">b1</div>
+      <div class = "top_right smaller_div letter_number">a1</div>
+      <div class = "top_right smaller_div letter_number">c1</div>
+    </div>
+    <div class="outer_div">
+      <!--leftest is kinda poorly named here. It only applies an inline-block
+      property.-->
+      <div class="leftest smaller_div letter_number">a2</div>
+      <div class="leftest letter_number">c2</div>
+      <div class="smaller_div letter_number">d2</div>
+    </div>
+    <!--If you want the children to have an absolute position relative to the
+    parent, you must give the parent a non-static position. That's why this
+    outer_div has a positioned_div class too.-->
+    <div class="outer_div positioned_div">
+      <!--absolute_div applies position:absolute. The IDs deal with the actual
+      position.-->
+      <div id = "a3" class="absolute_div smaller_div letter_number">a3</div>
+      <div id = "b3" class="absolute_div smaller_div letter_number">b3</div>
+      <div id = "c3" class="absolute_div smaller_div letter_number">c3</div>
+      <div id = "d3" class="absolute_div smaller_div letter_number">d3</div>
+    </div>
+  </body>
+</html>

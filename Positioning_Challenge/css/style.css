@@ -1,0 +1,68 @@
+/*If the html and body don't have sizes, I can't use percent sizes for their
+children because the html and body would have a height of 0.*/
+html{
+  height: 100%;
+}
+body {
+  height: 100%;
+}
+/*I did this so the divs end up filling the screen (almost) which looks more
+pleasing than just filling up some arbitrary space. This also kind of shows how
+easy it is to create a visually pleasing page. You just need a good colour
+palette and nice proportions. Here I'm using the rule of thirds.*/
+div{
+  width: 33%;
+  height: 33%;
+}
+/*This is probably the easiest and most elegant solution, but you have less say
+over where exactly the elements are positioned. PROTIP: you can centre inline
+elements using text-align because text-align aligns anything that's inline*/
+div.display_div{
+  display: inline-block;
+  background-color: #0169CE;
+}
+/*I piled all float divs to the left and gave the middle div a left and right
+margin.*/
+div.float_div{
+  float: left;
+  background-color: #1E90FF;
+}
+div.float_centre{
+  margin: 0px 4px;
+}
+/*With a relative position, the only shared properties are the position:relative
+and background-color. If you used position:absolute, you could have also put
+top and margin top here.*/
+div.position_div{
+  position:relative;
+  background-color: #75BAFD;
+}
+/*Notice how the left-most div is the first position div in my HTML file and is
+the only div with a top margin. This is because with relative positioning, the
+divs are first placed where they should be, then moved to their new relative
+position. If the first div has a top margin, the second and third divs would
+each also be pushed down by the top margin.*/
+div.position_left{
+  left: 0;
+  /*I set top to 33% because float divs don't take up any space in our DOM.
+  Without top:33%, this div would end up in the same(ish) position as the
+  floating divs above*/
+  top: 33%;
+  margin-top: 4px;
+}
+/*I had to set a left margin again to give my elements the same spacing as the
+inline elements*/
+div.position_centre{
+  left: 33%;
+  margin-left: 4px;
+}
+/*Why 8px margin? When 2 divs are placed one after the other, whether the first
+div has a left/right margin doesn't affect the positioning of the second div.
+ONLY top and bottom margins affect subsequent div positioning. You can use
+absolute postiioning to make sure NO margins affect subsequent element position,
+but I stuck with relative.*/
+div.position_right{
+  left: 66%;
+  top:-33%;
+  margin-left: 8px;
+}
