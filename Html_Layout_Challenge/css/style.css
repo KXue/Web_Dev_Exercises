@@ -52,16 +52,17 @@ pain*/
 }
 .jumbotron{
   background: url(../img/hero-photo.png);
+  position:relative;
   /*The advantage of having a known and fixed width is you can set the
   background size! This way, the image won't get all fat or skinny when you
   change the size of the window.*/
-  background-size: 1366px 720px;
+  background-size: cover;
   background-repeat: no-repeat;
-  height: 720px;
+  padding-bottom:52.71%;
   padding-left: 209px;
 }
 .jumbotron-content{
-  position: relative;
+  position: absolute;
   /*the next 2 lines centre the div vertically. What they do is pretty self
   explanatory.*/
   top: 50%;
@@ -161,9 +162,9 @@ colours?*/
 /*Purple lady works the same as blue lady.*/
 .features-container{
   background: url(../img/about-photo.png);
-  background-size: 1366px 720px;
+  background-size: cover;
   background-repeat: no-repeat;
-  height: 720px;
+  padding-bottom:52.71%;
   color:white;
   text-align:center;
   vertical-align: middle;
@@ -173,8 +174,7 @@ colours?*/
   width: 320px;
   display: inline-block;
   position:relative;
-  top: 50%;
-  margin-top: -160px;
+  margin-bottom: -52.71%;
 }
 .feature-container h2{
   font-family: "arial bold", "arial";
