@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style/avgrund.css">
+    <link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet"> <!-- 3 KB -->
+  </head>
+  <body>
+    <div id = "div1" class="container">
+      container
+    </div>
+    <div id = "nav">
+      nav
+    </div>
+    <script src = "http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="backstretch.js"></script>
+    <script type="text/javascript" src="jquery.avgrund.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script> <!-- 16 KB -->
+
+    <!-- 2. Add images to <div class="fotorama"></div>. -->
+    <div class="fotorama">
+      <img src="http://s.fotorama.io/1.jpg">
+      <img src="http://s.fotorama.io/2.jpg">
+    </div>
+    <script>
+      $.backstretch([
+          "http://dl.dropbox.com/u/515046/www/outside.jpg"
+        , "http://dl.dropbox.com/u/515046/www/garfield-interior.jpg"
+        , "http://dl.dropbox.com/u/515046/www/cheers.jpg"
+      ], {duration: 3000, fade: 750});
+      $('#div1').avgrund();
+      var containernav = $('.container, #nav');
+      console.log(containernav);
+      console.log(containernav.html());
+      containernav.css( "background-color", "yellow" );
+      $.each(containernav, function(index, value){
+        console.log(value)
+      });
+      for(i = 0; i < containernav.length; i++){
+        console.log(containernav[i]);
+      }
+      $('#div1').animate({'marginLeft':'+=300px', 'font-size':'14px'}, 500, function() {
+        /*...code to run on completion… this is called a callback function.*/
+        });
+    </script>
+    <a class="twitter-timeline" href="https://twitter.com/ivexnuke" data-widget-id="637408029177159680">Tweets by @ivexnuke</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+  </body>
+</html>
