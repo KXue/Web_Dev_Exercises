@@ -1,3 +1,4 @@
+/*Commentary mostly in html file*/
 html{
   height: 100%;
 }
@@ -29,17 +30,21 @@ div.letter_number{
   border-width: 1px;
 }
 div.absolute_div{
-  position: relative;
+  position: absolute;
+}
+div.positioned_div{
+  position:relative;
 }
 #b3{
   left: 25%;
-  top: -150px;
+  top: -50px;
 }
 #c3{
   left: 50%;
-  top: -150%
+  top: -150px
 }
 #d3{
-  left: 95%;
-  top: -100%;
+  /*Right's a thing too! and it's very useful*/
+  right: -17px;
+  top: 30px;
 }

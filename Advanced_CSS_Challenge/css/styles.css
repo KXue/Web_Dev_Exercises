@@ -9,14 +9,14 @@ BTW:
   read or figure out what's going on. The original classes implementation is
   muchmore readable.
 Also:
-  This sounds cliche but there's no right answer. Your answer's right as long as
-  you get points. I just took one idea to the extreme, but you might save more
+  This sounds cliche but there's no right answer. If you get points, your
+  answer's right. I just took one idea to the extreme, but you might save more
   lines of code using more classes. Anyways, There is probably a way to get more
   points than I got.
 Finally:
   It's kinda cheap to put your curly brackets on the same line as properties so
-  I didn't do that. You can to save even more lines but I don't know if you get
-  points for it.
+  I didn't do that. You can to save even more lines that way but I don't know
+  if you getpoints for it.
 */
 /*
 ALL text is white (except for the word "color") so we'll put color:white in
@@ -52,7 +52,7 @@ img {
 }
 /*
 There's only one span so there's no reason to use classes. You get 1 point
-here. You can use a crazy selector to get 1 extra point.
+here. You can use a crazy selector instead to get 1 extra point.
 */
 span{
   color:#9b59b6;
@@ -68,8 +68,9 @@ body > div{
 }
 /*
 Not sure if we taught you first-child but here is is. The selector is self
-explanatory. This replaces jumbotron. You can also remove width because divs are
-display: block; by default. This means they fill the width automatically.
+explanatory. This replaces jumbotron. You can also remove width:100% because
+divs are display: block; by default. This means they fill the width
+automatically.
 */
 body > div > div:first-child {
   background-color:#3498db;
